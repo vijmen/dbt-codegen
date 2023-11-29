@@ -1,6 +1,7 @@
 # dbt-codegen v0.11.0
 
 ## 🚨 Breaking change
+'--quiet' parameter added  to the base_model_creation.sh script. This stops the terminal output from being added to the generated file.
 
 `include_data_types` parameter added to `generate_model_yaml` and behavior changed for `generate_source`. Both default to `true`
 and are lowercase to align with the dbt style guide. Scale & precision are **not** included. Previous logic for `generate_source` defaulted to `false` and the resulting data types were uppercase and included scale & precision ([#122](https://github.com/dbt-labs/dbt-codegen/pull/122)).
